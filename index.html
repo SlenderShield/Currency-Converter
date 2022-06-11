@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	      name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<title>Currency Converter</title>
+	<link href="./style.css" rel="stylesheet">
+	<!-- 	Icons from Font Awesome -->
+	<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+	      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+	      referrerpolicy="no-referrer" rel="stylesheet"/>
+</head>
+<body>
+<div class="wrapper">
+	<header>
+		Currency Converter
+	</header>
+	<form action="#">
+		<div class="amount">
+			<p>Enter Amount</p>
+			<input type="text" value="1">
+		</div>
+		<div class="drop-list">
+			<div class="from">
+				<p>From</p>
+				<div class="select-box">
+					<img alt="flag" class="flag" src="https://countryflagsapi.com/png/us">
+					<select>
+						<option value="USD">USD</option>
+						<option value="IN">IN</option>
+						<option value="NPR">NPR</option>
+						<option value="PKR">PKR</option>
+						<option value="MAD">MAD</option>
+					</select>
+				</div>
+			</div>
+			<div class="icon">
+				<i class="fas fa-exchange-alt"></i>
+			</div>
+			<div class="to">
+				<p>To</p>
+				<div class="select-box">
+					<img alt="flag" class="flag" src="https://countryflagsapi.com/png/np">
+					<select>
+						<option value="USD">USD</option>
+						<option value="IN">IN</option>
+						<option value="NPR">NPR</option>
+						<option value="PKR">PKR</option>
+						<option value="MAD">MAD</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="exchange-rate">
+			1 USD = 118.16NPR
+		</div>
+		<button>Get Exchange Rate</button>
+	</form>
+</div>
+</body>
+</html>
