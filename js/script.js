@@ -1,4 +1,4 @@
-const apiKey = ${{secrets.APIKEY}}
+const apiKey ='b3810ab020f3f8dc9fb85ea6'
 const dropList = document.querySelectorAll(".drop-list select")
 let fromCurrency = document.querySelector(".from select")
 let toCurrency = document.querySelector(".to select")
