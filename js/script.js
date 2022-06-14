@@ -1,4 +1,4 @@
-const apiKey ='b3810ab020f3f8dc9fb85ea6'
+const apiKey = 'b3810ab020f3f8dc9fb85ea6'
 const dropList = document.querySelectorAll(".drop-list select")
 let fromCurrency = document.querySelector(".from select")
 let toCurrency = document.querySelector(".to select")
@@ -44,6 +44,17 @@ getButton.addEventListener('click', event => {
     getExchangeRate();
 })
 
+
+const exchangeIcon = document.querySelector(".drop-list .icon")
+exchangeIcon.addEventListener("click", () => {
+    let tempCode = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = tempCode;
+    loadFlag(fromCurrency);  // Call load flag after exchanging
+    loadFlag(toCurrency);  // Call load flag after exchanging
+    getExchangeRate()
+})
+
 function getExchangeRate() {
     const amount = document.querySelector(".amount input")
     let amountVal = amount.value
@@ -61,5 +72,7 @@ function getExchangeRate() {
 
         let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
         exchangeRateTxn.innerHTML = `${amountVal} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`
+    }).catch(()=>{ // if user went offline or currency exchange not possible
+        exchangeRateTxn.innerHTML = "Something went wrong";
     })
 }
