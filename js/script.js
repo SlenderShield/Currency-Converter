@@ -72,7 +72,7 @@ function getExchangeRate() {
 
         let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
         exchangeRateTxn.innerHTML = `${amountVal} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`
-    }).catch(()=>{ // if user went offline or currency exchange not possible
+    }).catch(() => { // if user went offline or currency exchange not possible
         exchangeRateTxn.innerHTML = "Something went wrong";
     })
 }
